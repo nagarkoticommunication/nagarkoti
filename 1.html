@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नगरकोटी कम्युनिकेशन एंड कंप्यूटर्स एजुकेशन सेंटर</title>
+    <!-- Font Awesome Icons for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #333;
+            --background-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+            animation: changeBackgroundColor 30s infinite linear;
+        }
+
+        @keyframes changeBackgroundColor {
+            0%   { background-color: #e6f7ff; }
+            25%  { background-color: #f6ffed; }
+            50%  { background-color: #fffbe6; }
+            75%  { background-color: #f9f0ff; }
+            100% { background-color: #e6f7ff; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        header .tagline {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 40px 0 30px 0;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+        }
+
+        .service-card .icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+            flex-grow: 1;
+        }
+
+        .service-card .docs {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            text-align: left;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .service-card .docs strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .service-card .docs ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        .service-card .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: var(--secondary-color);
+            color: #fff;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>नगरकोटी कम्युनिकेशन एंड कंप्यूटर्स एजुकेशन सेंटर</h1>
+        <p class="tagline">आपकी सभी डिजिटल जरूरतों का एक ही स्थान</p>
+        <div class="contact-info">
+            <i class="fas fa-phone"></i> | <i class="fab fa-whatsapp"></i> व्हाट्सएप करें: <a href="https://wa.me/917060123445?text=नमस्ते!%20मैं%20आपकी%20सेवाओं%20के%20बारे%20में%20जानकारी%20चाहता%20हूँ।">7060123445</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Section 1: Sales and Service -->
+        <h2 class="section-title">प्रोडक्ट्स सेल्स एंड सर्विस</h2>
+        <div class="services-grid">
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मैं%20एक%20नए/पुराने%20लैपटॉप%20के%20बारे%20में%20पूछना%20चाहता%20हूँ।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-laptop"></i></div>
+                    <h3>नए और पुराने लैपटॉप</h3>
+                    <p>सभी ब्रांड्स के नए और अच्छी कंडीशन वाले पुराने लैपटॉप्स की खरीद, बिक्री और सर्विस।</p>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20मोबाइल%20फोन%20या%20उसकी%20सर्विस%20के%20बारे%20में%20जानकारी%20चाहिए।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>मोबाइल सेल्स एंड सर्विस</h3>
+                    <p>नए और यूज्ड मोबाइल फोन्स, रिपेयरिंग और एक्सेसरीज़ उपलब्ध हैं।</p>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20प्रिंटर%20या%20उसकी%20सर्विस%20के%20बारे%20में%20जानकारी%20चाहिए।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-print"></i></div>
+                    <h3>प्रिंटर सेल्स एंड सर्विस</h3>
+                    <p>लेजरजेट, इंकजेट प्रिंटर्स की खरीद, बिक्री, रिफिलिंग और सर्विस।</p>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20CCTV%20कैमरा%20लगवाने%20के%20बारे%20में%20जानकारी%20चाहिए।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-video"></i></div>
+                    <h3>CCTV कैमरा</h3>
+                    <p>घर और दुकान की सुरक्षा के लिए CCTV कैमरा इंस्टालेशन और सर्विस।</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Section 2: Computer Education -->
+        <h2 class="section-title">कंप्यूटर एजुकेशन सेंटर</h2>
+        <div class="services-grid">
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मैं%20कंप्यूटर%20डिप्लोमा%20कोर्स%20के%20बारे%20में%20जानना%20चाहता%20हूँ।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>डिप्लोमा/सर्टिफिकेट कोर्स</h3>
+                    <p>बेसिक कंप्यूटर, DCA, ADCA, Tally, DTP और अन्य जॉब-ओरिएंटेड कोर्सेज।</p>
+                    <div class="price">
+                        मासिक फीस: ₹500<br>
+                        एडमिशन (6 माह): ₹1000 | एडमिशन (1 वर्ष): ₹2000
+                    </div>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20बिना%20क्लास%20लिए%20सिर्फ%20परीक्षा%20देकर%20डिप्लोमा%20लेना%20है।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-file-certificate"></i></div>
+                    <h3>डायरेक्ट डिप्लोमा (परीक्षा द्वारा)</h3>
+                    <p>अगर आपको पहले से कंप्यूटर आता है, तो केवल परीक्षा देकर सरकारी मान्यता प्राप्त डिप्लोमा प्राप्त करें।</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Section 3: Government and RTO Services -->
+        <h2 class="section-title">सरकारी और RTO सेवाएं</h2>
+        <div class="services-grid">
+             <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20अपनी%20गाड़ी%20का%20इन्सुरेंस%20कराना%20है।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-car-crash"></i></div>
+                    <h3>गाड़ी का इन्शुरन्स</h3>
+                    <p>सभी प्रकार की गाड़ियों (बाइक, कार, टैक्सी) का इन्शुरन्स। टैक्सी गाड़ियों पर आकर्षक कैशबैक उपलब्ध!</p>
+                    <div class="docs">
+                        <strong>आवश्यक दस्तावेज़:</strong>
+                        <ul>
+                            <li>गाड़ी की पुरानी RC</li>
+                            <li>पुराना इन्शुरन्स (यदि हो)</li>
+                            <li>आधार कार्ड</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20ऑनलाइन%20चालान/टैक्स%20जमा%20करना%20है।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-receipt"></i></div>
+                    <h3>ऑनलाइन चालान / टैक्स</h3>
+                    <p>गाड़ी का ऑनलाइन चालान भरें या कमर्शियल गाड़ी का टैक्स जमा करें।</p>
+                     <div class="docs">
+                        <strong>आवश्यक दस्तावेज़:</strong>
+                        <ul>
+                            <li>गाड़ी नंबर</li>
+                            <li>चालान नंबर (यदि हो)</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मेरा%20एक%20जरूरी%20डॉक्यूमेंट%20खो%20गया%20है।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-id-card"></i></div>
+                    <h3>खोया हुआ दस्तावेज़ निकालें</h3>
+                    <p>खोया हुआ आधार कार्ड, पैन कार्ड, ड्राइविंग लाइसेंस या गाड़ी की RC दोबारा निकालें।</p>
+                    <div class="docs">
+                        <strong>आवश्यक दस्तावेज़:</strong>
+                        <ul>
+                            <li>आधार/पैन/लाइसेंस/RC नंबर</li>
+                            <li>रजिस्टर्ड मोबाइल नंबर (OTP के लिए)</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+             <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20विवाह%20पंजीकरण%20(UCC)%20के%20बारे%20में%20जानकारी%20चाहिए।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-ring"></i></div>
+                    <h3>विवाह पंजीकरण / UCC</h3>
+                    <p>उत्तराखंड सरकार के पोर्टल पर विवाह पंजीकरण और UCC रजिस्ट्रेशन करवाएं।</p>
+                    <div class="docs">
+                        <strong>आवश्यक दस्तावेज़:</strong>
+                        <ul>
+                            <li>वर-वधू का आधार कार्ड, फोटो</li>
+                            <li>गवाहों का आधार कार्ड</li>
+                            <li>शादी का कार्ड/प्रमाण पत्र</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20स्थाई/जाति/परिवार%20रजिस्टर%20की%20नकल%20चाहिए।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>स्थाई/जाति/परिवार नकल</h3>
+                    <p>स्थाई निवास प्रमाण पत्र, जाति प्रमाण पत्र और परिवार रजिस्टर की नकल ऑनलाइन निकालें।</p>
+                    <div class="docs">
+                        <strong>आवश्यक दस्तावेज़:</strong>
+                        <ul>
+                            <li>आवेदनकर्ता का आधार कार्ड</li>
+                            <li>पुराना प्रमाण पत्र (यदि हो)</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Section 4: Cyber Cafe and Financial Services -->
+        <h2 class="section-title">साइबर कैफे और अन्य सेवाएं</h2>
+        <div class="services-grid">
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20ऑनलाइन%20फॉर्म%20भरवाना%20है।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>ऑनलाइन फॉर्म भरें</h3>
+                    <p>सभी प्रकार के सरकारी और प्राइवेट नौकरी, एडमिशन, परीक्षा आदि के फॉर्म भरें।</p>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20फोटो%20स्टेट/प्रिंट%20आउट%20चाहिए।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-copy"></i></div>
+                    <h3>फोटो स्टेट और प्रिंटिंग</h3>
+                    <p>ब्लैक & वाइट और कलर फोटोकॉपी, डॉक्यूमेंट स्कैनिंग और प्रिंटिंग की सुविधा।</p>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20पासपोर्ट%20साइज़%20फोटो%20बनवानी%20हैं।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-camera"></i></div>
+                    <h3>पासपोर्ट साइज फोटो</h3>
+                    <p>तुरंत पासपोर्ट साइज फोटो बनवाएं। सॉफ्ट कॉपी भी उपलब्ध है।</p>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20पैसे%20ट्रांसफर%20करने%20हैं।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3>मनी ट्रांसफर</h3>
+                    <p>भारत में कहीं भी तुरंत और सुरक्षित रूप से पैसे भेजें।</p>
+                    <div class="docs">
+                        <strong>आवश्यक:</strong>
+                        <ul>
+                            <li>आधार कार्ड (KYC के लिए)</li>
+                            <li>प्राप्तकर्ता का बैंक अकाउंट विवरण</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://wa.me/917060123445?text=नमस्ते!%20मुझे%20कैश%20निकालना%20है।" class="service-card">
+                <div>
+                    <div class="icon"><i class="fas fa-wallet"></i></div>
+                    <h3>कैश विड्रॉल (AEPS)</h3>
+                    <p>अपने आधार कार्ड और फिंगरप्रिंट से किसी भी बैंक खाते से कैश निकालें।</p>
+                    <div class="docs">
+                        <strong>आवश्यक:</strong>
+                        <ul>
+                            <li>आधार कार्ड</li>
+                            <li>बैंक से लिंक मोबाइल नंबर</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>नगरकोटी कम्युनिकेशन एंड कंप्यूटर्स एजुकेशन सेंटर</strong></p>
+        <p><i class="fas fa-map-marker-alt"></i> पता: 
+            <a href="https://www.google.com/maps/place/NAGARKOTI+COMPUTERS+EDUCATION+CENTER/@29.8011592,80.249151,17z/data=!3m1!4b1!4m6!3m5!1s0x39a6d3cb348097e9:0x62ef2bbf0b572ce!8m2!3d29.8011546!4d80.2517259!16s%2Fg%2F11wbk23c2p?hl=en&entry=ttu" target="_blank" rel="noopener noreferrer">
+                ग्राउंड फ्लोर, शॉप नं 07, नगर पालिका कॉम्प्लेक्स, मेन मार्केट स्टेशन, गांधी चौक के पास, डीडीहाट, उत्तराखंड 262551
+            </a>
+        </p>
+        <p><i class="fab fa-whatsapp"></i> संपर्क/व्हाट्सएप: <a href="https://wa.me/917060123445?text=नमस्ते!">7060123445</a></p>
+        <p>© 2024. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
